@@ -1,0 +1,58 @@
+.organizations {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 750px;
+    margin: 0 auto;
+    & > .item {
+        flex: 0 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 24px;
+
+        & > .box {
+            padding: 15px;
+            background-color: #fff;
+            cursor: pointer;
+            & > .title {
+                display: flex;
+                justify-content: space-between;
+            }
+            .icon {
+                color: #1890ff;
+                margin-right: 4px;
+                margin-left: -4px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .organizations {
+        width: 750px;
+
+        & > .item {
+            flex: 0 50%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .organizations {
+        width: 970px;
+
+        & > .item {
+            flex: 0 25%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .organizations {
+        width: 1170px;
+        & > .item {
+            flex: 0 25%;
+        }
+    }
+}

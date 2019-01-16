@@ -1,0 +1,74 @@
+@import '~antd/lib/style/themes/default.less';
+
+.headerList {
+    margin-bottom: 4px;
+}
+
+.tabsCard {
+    :global {
+        .ant-card-head {
+            padding: 0 16px;
+        }
+    }
+}
+
+.heading {
+    color: @heading-color;
+    font-size: 20px;
+}
+
+.stepDescription {
+    font-size: 14px;
+    position: relative;
+    left: 38px;
+    padding-top: 8px;
+    text-align: left;
+
+    > div {
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+}
+
+.textSecondary {
+    color: @text-color-secondary;
+}
+
+.follower {
+    cursor: pointer;
+    margin-right: 18px;
+}
+
+.follower-add {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.addModule {
+    display: flex;
+    border-top: 1px solid;
+}
+
+.comment-box {
+    margin-top: 24px;
+    .comment-box-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: @screen-sm) {
+    .stepDescription {
+        left: 8px;
+    }
+}
