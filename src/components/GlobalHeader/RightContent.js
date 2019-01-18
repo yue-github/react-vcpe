@@ -13,7 +13,9 @@ export default class GlobalHeaderRight extends PureComponent {
             payload: item,
         });
     }
-
+    resetPassword(){
+        
+    }
     render() {
         let {
             currentUser,
@@ -27,7 +29,8 @@ export default class GlobalHeaderRight extends PureComponent {
         //     avatar:'',
         //     name:'wutongyue'
         // };
-        // currentUser=currentUser[0];
+        // if(currentUser[0].name)currentUser=currentUser[0];
+        console.log('components/GlobalHeader/RightContent');
         const menu = (
             <Menu className={styles.menu} onClick={onMenuClick}>
                 <Menu.Item key="settings">
