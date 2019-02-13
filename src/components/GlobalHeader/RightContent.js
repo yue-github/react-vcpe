@@ -30,7 +30,7 @@ export default class GlobalHeaderRight extends PureComponent {
         //     name:'wutongyue'
         // };
         // if(currentUser[0].name)currentUser=currentUser[0];
-        console.log('components/GlobalHeader/RightContent');
+        // console.log('components/GlobalHeader/RightContent');
         const menu = (
             <Menu className={styles.menu} onClick={onMenuClick}>
                 <Menu.Item key="settings">

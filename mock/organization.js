@@ -36,7 +36,7 @@ export default {
     //     byInviteInss: [],
     // },
     // 'POST /api/institution/getAuthority': {
-    //     projectAdd: true,
+    //     projectAdd: false,
     //     projectDel: true,
     //     projectEdit: true,
     //     projectInfo: true,
@@ -60,10 +60,10 @@ export default {
     //     taskInfo: true,
     //     taskAdd: true,
     // },
-    // 'POST /api/institution/addIns': {
-    //     status: 200,
-    //     msg: '创建成功!',
-    // },
+    'POST /api/institution/addIns': {
+        status: 200,
+        msg: '创建成功!',
+    },
     'POST /api/institution/updateIns': {
         status: 200,
         msg: '更新成功!',

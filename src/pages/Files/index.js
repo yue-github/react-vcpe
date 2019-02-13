@@ -104,10 +104,12 @@ class Files extends Component {
     fetchList(cid) {
         const { dispatch } = this.props;
         const { id } = this.state;
+        let token=JSON.parse(localStorage.getItem('app')).token;
         dispatch({
             type: 'filesList/fetchList',
             payload: {
                 fileid: cid === undefined ? id : cid,
+                token: `Bearer ${token}`
             },
         });
     }
@@ -133,6 +135,7 @@ class Files extends Component {
 
     renderUploadModal() {
         const { uploadModal, id } = this.state;
+        let token=JSON.parse(localStorage.getItem('app')).token;
         return (
             <Modal
                 visible={uploadModal}
@@ -144,11 +147,12 @@ class Files extends Component {
                 }}
             >
                 <Dragger
+                
                     action="/api/file/uploadFile"
-                    data={{ parentid: id, insid: getCurrentOrganizationId() }}
+                    data={{token: `Bearer ${token}`, parentid: id, insid: getCurrentOrganizationId() }}
                     name="file"
                     listType="picture"
-                    multipe
+                    multiple
                 >
                     <p className="ant-upload-drag-icon">
                         <Icon type="inbox" />
@@ -157,6 +161,7 @@ class Files extends Component {
                     <p className="ant-upload-hint">
                         支持单个文件或批量上传，单个文件大小不得超过10M
                     </p>
+                    
                 </Dragger>
             </Modal>
         );
@@ -218,7 +223,6 @@ class Files extends Component {
 
     render() {
         const { files, loading, isOperation } = this.props;
-
         return (
             <Card
                 title="文件柜"
@@ -245,7 +249,7 @@ class Files extends Component {
                             <Authorized authory="fileUpload">
                                 <Button
                                     icon="upload"
-                                    onClick={() => this.setState({ uploadModal: true })}
+                                    onClick={() => this.setState({ uploadModal: true})}
                                 >
                                     上传文件
                                 </Button>

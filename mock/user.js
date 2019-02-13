@@ -1,5 +1,5 @@
-const loginToken =
-    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zOS4xMDguMTY3LjY0XC9hcGlcL2F1dGhcL2FjY2Vzc1Rva2VuIiwiaWF0IjoxNTQxODMyMDM0LCJleHAiOjE1NDE4MzI5MzQsIm5iZiI6MTU0MTgzMjAzNCwianRpIjoieFRIcDM4Mlhwak1vTTVGVyIsInN1YiI6NjcsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ThWJBQw-nNuwwPr9O5l5vAW0DRmgnYZI6u0BpQDfLd0';
+// const loginToken =
+//     'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8zOS4xMDguMTY3LjY0XC9hcGlcL2F1dGhcL2FjY2Vzc1Rva2VuIiwiaWF0IjoxNTQxODMyMDM0LCJleHAiOjE1NDE4MzI5MzQsIm5iZiI6MTU0MTgzMjAzNCwianRpIjoieFRIcDM4Mlhwak1vTTVGVyIsInN1YiI6NjcsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.ThWJBQw-nNuwwPr9O5l5vAW0DRmgnYZI6u0BpQDfLd0';
 
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 export default {
@@ -49,9 +49,9 @@ export default {
             code: 123456,
         });
     },
-    'POST /api/institution/getUnReads': {
-        msgCounts: 21,
-    },
+    // 'POST /api/institution/getUnReads': {
+    //     msgCounts: 21,
+    // },
     'POST /api/institution/getMessage': {
         pageSize: 8,
         page: 1,
